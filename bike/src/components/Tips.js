@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
+import FirstAid from './contents_FirstAid';
 
 class Tips extends Component {
     constructor(props){
@@ -28,9 +29,7 @@ class Tips extends Component {
                 <div><h1>Exercise tab</h1></div>
             );
         } else if(this.state.activeTab === 1){
-            return(
-                <div><h1>First Aid tab</h1></div>
-            );
+            return( <FirstAid/> );
         } else{
             return (
                 <div><h1>exception</h1></div>
