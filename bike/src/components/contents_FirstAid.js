@@ -22,7 +22,7 @@ const symtoms = [
 function FirstAid(){
     {
         return (
-            <div className="Movie">
+            <div>
                 {symtoms.map(arr => 
                     < Symtom name = {arr.name} 
                     picture = {arr.picture} 

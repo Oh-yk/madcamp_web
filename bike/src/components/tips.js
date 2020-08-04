@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
 import FirstAid from './contents_FirstAid';
+import './contents.css';
 
 class Tips extends Component {
     constructor(props){
         super(props)
-        this.state = {activeTab : 0};
+        this.state = {activeTab : 1};
     }
     render() {
         return (
