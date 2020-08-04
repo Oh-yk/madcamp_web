@@ -1,0 +1,57 @@
+.header-color {
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.landing-grid {
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+}
+
+.main-img {
+  height: 700px;
+  padding-top: 2em;
+}
+
+.banner-text {
+  background-color: rgb(57, 123, 143);
+  opacity: .8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.banner-text h1 {
+  font-size: 66px;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.banner-text hr {
+  border-top:  5px dotted white;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: aliceblue;
+  font-size: 20px;
+  padding: 1em;
+}
+
+.page-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+  color: white;
+}
+
+.page-links i {
+  color: white;
+  font-size: 5em;
+  padding: 8px;
+}
