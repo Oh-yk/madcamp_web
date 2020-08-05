@@ -36,9 +36,7 @@ function Exercise(){
 function Exer({name, picture}){
     return(
         <div className="Movie">
-            <div className="Movie__Column">
-                <h1>{name}</h1>
-            </div>
+            <h1>{name}</h1>
             <div className="video_wrap">
                 <iframe 
                 title = {name}

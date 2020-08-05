@@ -101,7 +101,9 @@ class Equipment extends Component {
     render() {
         return (
             <div className="category-tabs">
-                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
+                <Tabs 
+                style = {{padding : "5px"}}
+                activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
                     <Tab>Helmet</Tab>
                     <Tab>Gloves</Tab>
                     <Tab>Clothes</Tab>

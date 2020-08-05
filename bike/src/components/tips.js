@@ -13,6 +13,7 @@ class tips extends Component {
         return (
             <div className = "Tips-tabs">
                 <Tabs 
+                style = {{padding : "5px"}}
                 activeTab = {this.state.activeTab} 
                 onChange = {(tabId) => this.setState({activeTab : tabId})} ripple>
                     <Tab>First Aid</Tab>
