@@ -49,12 +49,12 @@ function FirstAid(){
 
 function Symtom({name, picture, aid, exp}){
     return(
-        <div className = "Movie">
+        <div className = "Info">
             <div className="Movie__Column">
                 <div>
                     <img className = "Movie__Poster" 
                     src = {picture} alt={name} 
-                    height = "120px"/>
+                    />
                 </div>
             </div>
             <div className="Movie__Column">
