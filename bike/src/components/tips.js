@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
 import FirstAid from './contents_FirstAid';
 import './contents.css';
+import Exercise from './contents_Exercise';
 
-class Tips extends Component {
+class tips extends Component {
     constructor(props){
         super(props)
         this.state = {activeTab : 1};
@@ -26,9 +27,7 @@ class Tips extends Component {
 
     toggleCategories(){
         if(this.state.activeTab === 0){
-            return(
-                <div><h1>Exercise tab</h1></div>
-            );
+            return( <Exercise/> );
         } else if(this.state.activeTab === 1){
             return( <FirstAid/> );
         } else{
@@ -43,4 +42,4 @@ class Tips extends Component {
 
 
 
-export default Tips;
+export default tips;

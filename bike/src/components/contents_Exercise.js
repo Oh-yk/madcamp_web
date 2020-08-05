@@ -4,17 +4,13 @@ import './contents.css';
 const exercise = [
     {
         index : 0,
-        name : "찰과상",
-        picture : "https://www.youtube.com/watch?v=J7ddx9fhGhM",
-        aid : "운동종류",
-        symtom : "효과"
+        name : "고관절 스트레칭",
+        picture : "https://www.youtube.com/embed/J7ddx9fhGhM"
     },
     {
         index : 1,
-        name : "찰과상",
-        picture : "https://www.youtube.com/watch?v=qtXFu8G0t-U",
-        aid : "운동종류",
-        symtom : "효과"
+        name : "자전거 준비운동",
+        picture : "https://www.youtube.com/embed/qtXFu8G0t-U"
     }
 ]
 
@@ -25,9 +21,7 @@ function Exercise(){
             < Exer 
             key = {index}
             name = {arr.name} 
-            picture = {arr.picture} 
-            aid = {arr.aid}
-            symtom = {arr.symtom}/>
+            picture = {arr.picture}/>
             )}
         </div>
     )
@@ -35,15 +29,18 @@ function Exercise(){
 
 function Exer({name, picture, aid, symtom}){
     return(
-        <div className = "Movie">
-            <div className="Movie__Column">
-                <iframe url = {picture} title = {name}></iframe>
+        <div className="Movie">
+            <div className="video_wrap">
+                <iframe 
+                title = {name}
+                width="560" height="315" 
+                src={picture} frameBorder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen>
+                </iframe>
             </div>
             <div className="Movie__Column">
-                <h1>{name}</h1>
-                <h2>{symtom}</h2>
-                <h1>처치법</h1>
-                <h2>{aid}</h2>
+                <h2>{name}</h2>
             </div>
         </div>
     );
