@@ -73,6 +73,8 @@ class Equipment extends Component {
                                 <IconButton name="share" />
                             </CardMenu>
                         </Card>
+                        
+                        
                     </div>
                 </div>
                 
