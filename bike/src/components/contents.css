@@ -6,11 +6,17 @@
     align-content: flex-start;
 }
 
+.video_wrap{
+    width: 580;
+    justify-items: center;
+    align-items: center;
+}
+
 .Movie{
     flex-basis: 40%;
 
     padding: 20px 20px;
-    margin: 20px 20px;
+    margin: 30px 20px;
     box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
 }
 
@@ -26,31 +32,15 @@
 }
 
 .Movie h1{
-    font-size:20px;
+    font-size:18px;
     font-weight: 600;
 }
 
 .Movie h2{
     font-size:15px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
-.Movie .Movie__Genres{
-    display: flex;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-}
-
-.Movie__Genres .Movie__Genre{
-    margin-right:10px;
-    color:#B4B5BD;
-}
-
-.Movie .Movie__Synopsis {
-    text-overflow: ellipsis;
-    color:#B4B5BD;
-    overflow: hidden;
-}
 
 .Movie .Movie__Poster{
     max-width: 100%;

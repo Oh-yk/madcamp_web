@@ -10,13 +10,19 @@ const exercise = [
     {
         index : 1,
         name : "자전거 준비운동",
-        picture : "https://www.youtube.com/embed/qtXFu8G0t-U"
+        picture : "https://www.youtube.com/embed/qtXFu8G0t-U?start=52"
+    },
+    {
+        //https://www.mjmedi.com/news/articleView.html?idxno=36598
+        index : 2,
+        name : "숙소에서 하는 무릎통증 예방 스트레칭",
+        picture : "https://www.youtube.com/embed/VVn5IUM8sms?start=41"
     }
 ]
 
 function Exercise(){
     return (
-        <div>
+        <div className = "item-box">
             { exercise.map((arr, index) => 
             < Exer 
             key = {index}
@@ -27,9 +33,12 @@ function Exercise(){
     )
 }
 
-function Exer({name, picture, aid, symtom}){
+function Exer({name, picture}){
     return(
         <div className="Movie">
+            <div className="Movie__Column">
+                <h1>{name}</h1>
+            </div>
             <div className="video_wrap">
                 <iframe 
                 title = {name}
@@ -38,9 +47,6 @@ function Exer({name, picture, aid, symtom}){
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen>
                 </iframe>
-            </div>
-            <div className="Movie__Column">
-                <h2>{name}</h2>
             </div>
         </div>
     );
