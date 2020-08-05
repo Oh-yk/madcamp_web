@@ -7,7 +7,7 @@ import Exercise from './contents_Exercise';
 class tips extends Component {
     constructor(props){
         super(props)
-        this.state = {activeTab : 1};
+        this.state = {activeTab : 0};
     }
     render() {
         return (
