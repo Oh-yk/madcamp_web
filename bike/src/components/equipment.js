@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton, Textfield } from 'react-mdl';
+import Helmets from './equipmentMaterials/helmets'
 
 class Equipment extends Component {
     constructor(props) {
@@ -7,8 +8,16 @@ class Equipment extends Component {
         this.state = {activeTab: 0};
     }
 
+    
+
     toggleCategories() {
         if(this.state.activeTab === 0) {
+            return (
+                <div>
+                    <Helmets />
+                </div>
+            )
+        } else if(this.state.activeTab === 1) {
             return (
                 <div>
                     <div>
@@ -64,12 +73,11 @@ class Equipment extends Component {
                                 <IconButton name="share" />
                             </CardMenu>
                         </Card>
+                        
+                        
                     </div>
                 </div>
-            )
-        } else if(this.state.activeTab === 1) {
-            return (
-                <div><h1>Gloves Recommendation List</h1></div>
+                
             )
         } else if(this.state.activeTab === 2) {
             return (
