@@ -17,7 +17,7 @@ class App extends Component {
                       <Link to="/mypage">My Page</Link>
                   </Navigation>
               </Header>
-              <Drawer title="Title">
+              <Drawer title="Happy Bike Trip">
                   <Navigation>
                   <Link to="/map">Map</Link>
                       <Link to="/equipment">Equipment</Link>

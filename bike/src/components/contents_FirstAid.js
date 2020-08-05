@@ -34,7 +34,7 @@ const symtoms = [
 
 function FirstAid(){
     return (
-        <div>
+        <div className = "item-box">
             {symtoms.map(arr => 
                 < Symtom 
                 key = {arr.index}

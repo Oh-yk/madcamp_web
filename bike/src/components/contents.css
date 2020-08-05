@@ -1,9 +1,16 @@
+.item-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
 .Movie{
-    background-color:white;
-    width:40%;
-    margin-bottom:50px;
-    text-overflow: ellipsis;
-    padding:20px 20px;
+    flex-basis: 40%;
+
+    padding: 20px 20px;
+    margin: 20px 20px;
     box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
 }
 

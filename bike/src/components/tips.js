@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell } from 'react-mdl';
+import { Tabs, Tab } from 'react-mdl';
 import FirstAid from './contents_FirstAid';
 import './contents.css';
 import Exercise from './contents_Exercise';
@@ -18,7 +18,7 @@ class tips extends Component {
                     <Tab>Exercise</Tab>
                     <Tab>First Aid</Tab>
                 </Tabs>
-                <section>
+                <section >
                     {this.toggleCategories()}
                 </section>
             </div>
