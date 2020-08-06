@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell } from 'react-mdl';
+import { Tabs, Tab } from 'react-mdl';
 import FirstAid from './contents_FirstAid';
+import './contents.css';
+import Exercise from './contents_Exercise';
 
-class Tips extends Component {
+class tips extends Component {
     constructor(props){
         super(props)
         this.state = {activeTab : 0};
@@ -11,12 +13,13 @@ class Tips extends Component {
         return (
             <div className = "Tips-tabs">
                 <Tabs 
+                style = {{padding : "5px"}}
                 activeTab = {this.state.activeTab} 
                 onChange = {(tabId) => this.setState({activeTab : tabId})} ripple>
-                    <Tab>Exercise</Tab>
                     <Tab>First Aid</Tab>
+                    <Tab>Exercise</Tab>
                 </Tabs>
-                <section>
+                <section style = {{backgroundColor : "#F8FFFF"}}>
                     {this.toggleCategories()}
                 </section>
             </div>
@@ -25,11 +28,9 @@ class Tips extends Component {
 
     toggleCategories(){
         if(this.state.activeTab === 0){
-            return(
-                <div><h1>Exercise tab</h1></div>
-            );
-        } else if(this.state.activeTab === 1){
             return( <FirstAid/> );
+        } else if(this.state.activeTab === 1){
+            return( <Exercise/> );
         } else{
             return (
                 <div><h1>exception</h1></div>
@@ -42,4 +43,4 @@ class Tips extends Component {
 
 
 
-export default Tips;
+export default tips;
