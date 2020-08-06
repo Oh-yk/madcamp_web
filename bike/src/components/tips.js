@@ -19,7 +19,7 @@ class tips extends Component {
                     <Tab>First Aid</Tab>
                     <Tab>Exercise</Tab>
                 </Tabs>
-                <section >
+                <section style = {{backgroundColor : "#F8FFFF"}}>
                     {this.toggleCategories()}
                 </section>
             </div>

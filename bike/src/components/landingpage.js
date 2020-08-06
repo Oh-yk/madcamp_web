@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import { Redirect } from 'react-router-dom';
-
+import '../index.css';
 
 class LandingPage extends Component {
 
@@ -35,9 +35,12 @@ class LandingPage extends Component {
                 <div style={{width: '100%', margin: 'auto'}}>
                     <Grid className="landing-grid">
                         <Cell col={12}>
-                            <h1
+                            <h2
                                 style = {
-                                   { width: "100%",
+                                   { 
+                                    fontFamily : 'Segoe UI',
+                                    paddingTop : "25px",
+                                    width: "100%",
                                     height: "400px",
                                     backgroundImage: `url(${"https://images.unsplash.com/photo-1592229338506-d4631f32b2b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"})`,
                                     backgroundSize: 'cover',
@@ -47,10 +50,12 @@ class LandingPage extends Component {
                                 onClick={() => mapClick()}
                             >
                                 Find Best Course For Your Trip
-                            </h1> 
-                            <h1 
+                            </h2> 
+                            <h2 
                                 style = {
-                                    { width: "100%",
+                                    { 
+                                     paddingTop : "35px",
+                                     width: "100%",
                                      height: "400px",
                                      backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjg3/MDAxNTk2NjU1NzM5NzUz.qRj3otzlLMIt9DPjbRfjvwy_ZmXEao1CSH8cMaTvAS0g.4IqRaNfM3mL-PMMwhMKZCiWB2Mc0IIagQNIxbdfePdYg.PNG.kgy556/equipment.png?type=w773"})`,
                                      backgroundSize: 'cover',
@@ -60,10 +65,12 @@ class LandingPage extends Component {
                                 onClick={() => eqClick()}
                             >
                                 Recommend Good Stuff
-                            </h1> 
-                            <h1 
+                            </h2> 
+                            <h2 
                                 style = {
-                                    { width: "100%",
+                                    { 
+                                     paddingTop : "35px",
+                                     width: "100%",
                                      height: "400px",
                                      backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjY1/MDAxNTk2NjU1NzM1NTM3.bvvCKnYWjZTbNRry0XBhLMD2M5nYJSAdqjPTzfu9Wbkg.zqlCT4v3IwPtoVYnwyEvcKfTz9JgQ6jTIZYKfNeL9oAg.PNG.kgy556/healing.png?type=w773"})`,
                                      backgroundSize: 'cover',
@@ -73,7 +80,7 @@ class LandingPage extends Component {
                                 onClick={() => tipClick()}
                             >
                                 How To Overcome Pain
-                            </h1> 
+                            </h2> 
                             <div className="banner-text">
                                 <h1>Everything You Need for a Bicycle Trip</h1>
                             

@@ -4,19 +4,29 @@ import './contents.css';
 const exercise = [
     {
         index : 0,
-        name : "고관절 스트레칭",
+        name : "[주행 전후] 고관절 스트레칭",
         picture : "https://www.youtube.com/embed/J7ddx9fhGhM"
     },
     {
         index : 1,
-        name : "자전거 준비운동",
+        name : "[주행 전] 자전거 준비운동",
         picture : "https://www.youtube.com/embed/qtXFu8G0t-U?start=52"
     },
     {
         //https://www.mjmedi.com/news/articleView.html?idxno=36598
         index : 2,
-        name : "숙소에서 하는 무릎통증 예방 스트레칭",
-        picture : "https://www.youtube.com/embed/VVn5IUM8sms?start=41"
+        name : "[주행 후] 무릎통증 예방 스트레칭",
+        picture : "https://www.youtube.com/embed/xLo46aEEbCI?start=90"
+    },
+    {
+        index : 3,
+        name : "[여행 전] 근력강화",
+        picture : "https://www.youtube.com/embed/hOSHQvFme7E?start=90"
+    },
+    {
+        index : 4,
+        name : "[여행 전] 지구력 강화",
+        picture : "https://www.youtube.com/embed/s14NQ6Cz4QE"
     }
 ]
 

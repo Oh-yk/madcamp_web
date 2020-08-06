@@ -4,11 +4,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: flex-start;
+    padding : 50px 0px 20px 0px;
 }
 
 .Movie{
+    background-color: white;
     padding: 20px 20px;
-    margin: 30px 20px;
+    margin: 25px 15px;
     box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
 }
 
@@ -25,11 +27,12 @@
 }
 
 .Info{
+    background-color: white;
     display: flex;
     flex-direction: row;
     flex-basis: 40%;
     padding: 20px 20px;
-    margin: 30px 20px;
+    margin: 15px 5px;
     box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
 }
 
@@ -41,7 +44,7 @@
 }
 
 .Movie__Column:last-child{
-    padding:20px 0;
+    padding:0px 0;
     width:60%;
 }
 
@@ -49,6 +52,7 @@
     color: #030066;
     font-size:18px;
     font-weight: 600;
+    margin : 0px 0px;
 }
 
 
@@ -59,8 +63,8 @@
 
 
 .Info .Movie__Poster{
-    margin-top: 20px;
+    margin-top: 0px;
     max-width: 100%;
     position: relative;
-    box-shadow: -5px 10px 19px rgba(83, 83, 83, 0.3), 5px 7px 6px rgba(80,80,80,0.22);
+    border: thin none rgb(127, 130, 131);
 }

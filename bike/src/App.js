@@ -9,15 +9,17 @@ class App extends Component {
     return (
       <div className="demo-big-content">
           <Layout>
-              <Header className="header-color" title="Happy Bicycle Trip" scroll>
+              <Header className="header-color"
+              title="Happy Bicycle Trip" scroll>
                   <Navigation>
+                      <Link to="/">Home</Link>
                       <Link to="/map">Map</Link>
                       <Link to="/equipment">Equipment</Link>
                       <Link to="/tips">Tips</Link>
                       <Link to="/mypage">My Page</Link>
                   </Navigation>
               </Header>
-              <Drawer title="Title">
+              <Drawer title="Menu">
                   <Navigation>
                   <Link to="/map">Map</Link>
                       <Link to="/equipment">Equipment</Link>
