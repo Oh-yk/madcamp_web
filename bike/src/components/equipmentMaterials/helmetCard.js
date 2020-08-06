@@ -21,7 +21,9 @@ const HelmetCard = (props) => {
                     {props.published}
                 </CardText>
                 <CardActions border>
-                    <Button colored>Buy</Button>
+                    <a href={props.link} rel="noopener noreferrer" target="_blank">
+                        <Button colored>Buy</Button>
+                    </a>
                     <Button colored>Browse</Button>
                     <Button colored>Like</Button>
                 </CardActions>

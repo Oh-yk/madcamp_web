@@ -335,7 +335,9 @@ const HelmetList = (props) => {
                                 image={helmet.image}
                                 title={helmet.title}
                                 author={helmet.lprice}
-                                published={helmet.brand} />
+                                published={helmet.brand}
+                                link={helmet.link}
+                                json={helmet} />
                 })
             }
 
