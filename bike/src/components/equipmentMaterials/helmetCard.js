@@ -2,6 +2,7 @@ import React from 'react';
 import './uiEquip.css';
 import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
 
+
 const HelmetCard = (props) => {
     return (
         <div className="card-container">
@@ -21,7 +22,9 @@ const HelmetCard = (props) => {
                     {props.published}
                 </CardText>
                 <CardActions border>
-                    <Button colored>Buy</Button>
+                    <a href={props.link} rel="noopener noreferrer" target="_blank">
+                        <Button colored>Buy</Button>
+                    </a>
                     <Button colored>Browse</Button>
                     <Button colored>Like</Button>
                 </CardActions>
