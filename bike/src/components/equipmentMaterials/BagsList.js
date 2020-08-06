@@ -1,0 +1,347 @@
+import React from 'react';
+import ClothesCard from './clothesCard';
+import './uiEquip.css';
+
+const clothesinfo = [
+    {
+      title: '와일드맨 자전거 프레임 스마트폰 수납 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=23215228530',
+      image: 'https://shopping-phinf.pstatic.net/main_2321522/23215228530.20200620173701.jpg',
+      lprice: '13900',
+      hprice: '13900',
+      mallName: '네이버',
+      productId: '23215228530',
+      productType: '1',
+      brand: '와일드맨',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '락브로스 핸드폰수납 자전거 방수 가방 탑튜브 거치대',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=23248086021',
+      image: 'https://shopping-phinf.pstatic.net/main_2324808/23248086021.20200623234314.jpg',
+      lprice: '11000',
+      hprice: '20500',
+      mallName: '네이버',
+      productId: '23248086021',
+      productType: '1',
+      brand: '락브로스',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '락브로스 프레임 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82249171069',
+      image: 'https://shopping-phinf.pstatic.net/main_8224917/82249171069.1.jpg',
+      lprice: '9500',
+      hprice: '0',
+      mallName: '코이노월드',
+      productId: '82249171069',
+      productType: '2',
+      brand: '락브로스',
+      maker: '락브로스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '와일드맨 자전거/전동킥보드 핸들바 수납 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82147750641',
+      image: 'https://shopping-phinf.pstatic.net/main_8214775/82147750641.1.jpg',
+      lprice: '12700',
+      hprice: '0',
+      mallName: '다빈치바이씨클',
+      productId: '82147750641',
+      productType: '2',
+      brand: '와일드맨',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '락브로스 자전거 탑튜브 프레임 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82073927525',
+      image: 'https://shopping-phinf.pstatic.net/main_8207392/82073927525.1.jpg',
+      lprice: '10900',
+      hprice: '0',
+      mallName: '청년샵',
+      productId: '82073927525',
+      productType: '2',
+      brand: '락브로스',
+      maker: '락브로스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '토픽 안장가방 에어로 웨지 팩 자전거 안장가방 사이즈선택',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82170118550',
+      image: 'https://shopping-phinf.pstatic.net/main_8217011/82170118550.1.jpg',
+      lprice: '12200',
+      hprice: '0',
+      mallName: '미래스토',
+      productId: '82170118550',
+      productType: '2',
+      brand: '토픽',
+      maker: '토픽',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '[ORTRIEB] 2020 오르트립 새들백2 Saddlebag2 안장용 방수가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=9042131580',
+      image: 'https://shopping-phinf.pstatic.net/main_9042131/9042131580.3.jpg',
+      lprice: '63000',
+      hprice: '0',
+      mallName: '바이 바이씨클',
+      productId: '9042131580',
+      productType: '2',
+      brand: '오르트립',
+      maker: '오르트립',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '라이노워크 자전거 킥보드 핸들바 방수 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=81894984314',
+      image: 'https://shopping-phinf.pstatic.net/main_8189498/81894984314.jpg',
+      lprice: '14900',
+      hprice: '0',
+      mallName: '다빈치바이씨클',
+      productId: '81894984314',
+      productType: '2',
+      brand: '',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: 'ROSEWHEEL 대용량 안장 가방 자전거 여행 국토 종주 새들백',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=15336843990',
+      image: 'https://shopping-phinf.pstatic.net/main_1533684/15336843990.20190802005932.jpg',
+      lprice: '22970',
+      hprice: '45150',
+      mallName: '네이버',
+      productId: '15336843990',
+      productType: '1',
+      brand: '',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '락브로스 프레임 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=17545439174',
+      image: 'https://shopping-phinf.pstatic.net/main_1754543/17545439174.20200419033212.jpg',
+      lprice: '10430',
+      hprice: '127420',
+      mallName: '네이버',
+      productId: '17545439174',
+      productType: '1',
+      brand: '락브로스',
+      maker: '락브로스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '한강 스템백 HGE 한강에디션 / 브롬톤 / 자전거 핸들 안장 가방 [프렉티코 아르떼]',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82023257450',
+      image: 'https://shopping-phinf.pstatic.net/main_8202325/82023257450.2.jpg',
+      lprice: '39000',
+      hprice: '0',
+      mallName: '프렉티코 아르떼',
+      productId: '82023257450',
+      productType: '2',
+      brand: '',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '라탄 자전거 킥보드 바구니',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82288305957',
+      image: 'https://shopping-phinf.pstatic.net/main_8228830/82288305957.2.jpg',
+      lprice: '19000',
+      hprice: '0',
+      mallName: '오늘도살림',
+      productId: '82288305957',
+      productType: '2',
+      brand: '',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '스마트폰 거치 전동킥보드 자전거 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=23096595195',
+      image: 'https://shopping-phinf.pstatic.net/main_2309659/23096595195.1.jpg',
+      lprice: '8900',
+      hprice: '0',
+      mallName: '디디몰',
+      productId: '23096595195',
+      productType: '2',
+      brand: '',
+      maker: '디케이커머스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '락브로스 자전거 안장가방 RB C27',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=15970651338',
+      image: 'https://shopping-phinf.pstatic.net/main_1597065/15970651338.20200310031136.jpg',
+      lprice: '14450',
+      hprice: '20400',
+      mallName: '네이버',
+      productId: '15970651338',
+      productType: '1',
+      brand: '락브로스',
+      maker: '락브로스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '락브로스 자전거 투어백 짐받이 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=82294422862',
+      image: 'https://shopping-phinf.pstatic.net/main_8229442/82294422862.1.jpg',
+      lprice: '25500',
+      hprice: '0',
+      mallName: '옐로바이크',
+      productId: '82294422862',
+      productType: '2',
+      brand: '락브로스',
+      maker: '락브로스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '토픽 에어로 웨지 팩',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=5752411166',
+      image: 'https://shopping-phinf.pstatic.net/main_5752411/5752411166.20200101133717.jpg',
+      lprice: '12190',
+      hprice: '51240',
+      mallName: '네이버',
+      productId: '5752411166',
+      productType: '1',
+      brand: '토픽',
+      maker: '토픽',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '토픽 백로더 대용량 안장 가방 6L 10L 15L',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=12213189580',
+      image: 'https://shopping-phinf.pstatic.net/main_1221318/12213189580.2.jpg',
+      lprice: '55300',
+      hprice: '0',
+      mallName: '바스샵',
+      productId: '12213189580',
+      productType: '2',
+      brand: '토픽',
+      maker: '토픽',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '와일드맨 자전거 프레임 탑튜브 방수 가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=23509642934',
+      image: 'https://shopping-phinf.pstatic.net/main_2350964/23509642934.20200719210204.jpg',
+      lprice: '9900',
+      hprice: '12900',
+      mallName: '네이버',
+      productId: '23509642934',
+      productType: '1',
+      brand: '와일드맨',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '미니벨로 가방 자전거 캐링백 여행 운반 브롬톤',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=21738398891',
+      image: 'https://shopping-phinf.pstatic.net/main_2173839/21738398891.20200116040234.jpg',
+      lprice: '19850',
+      hprice: '73400',
+      mallName: '네이버',
+      productId: '21738398891',
+      productType: '1',
+      brand: '',
+      maker: '',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    },
+    {
+      title: '필모리스 자전거 랙백 안장가방',
+      link: 'https://search.shopping.naver.com/gate.nhn?id=19806991214',
+      image: 'https://shopping-phinf.pstatic.net/main_1980699/19806991214.20190617133148.jpg',
+      lprice: '46000',
+      hprice: '46000',
+      mallName: '네이버',
+      productId: '19806991214',
+      productType: '1',
+      brand: '필모리스',
+      maker: '필모리스',
+      category1: '스포츠/레저',
+      category2: '자전거',
+      category3: '자전거용품',
+      category4: '자전거가방'
+    }
+  ];
+
+const BagsList = (props) => {
+    return (
+        <div className="list">
+            {
+                clothesinfo.map((helmet, i) => {
+                    return <ClothesCard
+                                key={i}
+                                image={helmet.image}
+                                title={helmet.title}
+                                author={helmet.lprice}
+                                published={helmet.brand} />
+                })
+            }
+
+        </div>
+
+    )
+}
+
+export default BagsList;
