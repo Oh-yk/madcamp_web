@@ -3,6 +3,7 @@ import HelmetSearch from './helmetSearch';
 import request from 'superagent';
 import HelmetList from './HelmetList';
 import './uiEquip.css';
+import axios from 'axios';
 
 
 class Helmets extends Component {
@@ -17,15 +18,19 @@ class Helmets extends Component {
 
     searchHelmet = (e) => {
         e.preventDefault();
-        request
-            .get("https://www.googleapis.com/books/v1/volumes")
-            .query({q: this.state.searchField})
+        axios.get("https://192.249.19.244:2180/search/shop/love")
             .then((data) => {
                 console.log(data);
                 this.setState({ helmets: [...data.body.items]})
             })
-
+            .catch(error => {
+                console.log(error);
+            })
+            ;
     }
+
+    
+    
 
     handleSearch = (e) => {
         this.setState({ searchField: e.target.value })
@@ -34,10 +39,7 @@ class Helmets extends Component {
     render() {
         return(
             <div>
-                <HelmetSearch searchHelmet={this.searchHelmet} handleSearch={this.handleSearch} />
-
                 <HelmetList className="helmet-grid" helmets={this.state.helmets}/>
-                
             </div>
         )
     }
