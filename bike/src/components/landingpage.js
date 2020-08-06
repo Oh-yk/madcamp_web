@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import { Redirect } from 'react-router-dom';
 import '../index.css';
-import Equipment from './equipment';
+
 
 class LandingPage extends Component {
 
