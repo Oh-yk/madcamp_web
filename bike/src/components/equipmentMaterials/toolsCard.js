@@ -2,7 +2,7 @@ import React from 'react';
 import './uiEquip.css';
 import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
 
-const HelmetCard = (props) => {
+const ToolsCard = (props) => {
     return (
         <div className="card-container">
             {/* <img src={props.image} alt="" />
@@ -34,4 +34,4 @@ const HelmetCard = (props) => {
     )
 }
 
-export default HelmetCard;
+export default ToolsCard;

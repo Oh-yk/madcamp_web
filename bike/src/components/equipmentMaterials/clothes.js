@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import HelmetList from './HelmetList';
+import ClothesList from './ClothesList';
 import './uiEquip.css';
 
 
 
-class Helmets extends Component {
+class Clothes extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            helmets: [],
+            clothes: [],
         }
     }
 
@@ -17,10 +17,10 @@ class Helmets extends Component {
     render() {
         return(
             <div>
-                <HelmetList className="helmet-grid" helmets={this.state.helmets}/>
+                <ClothesList className="helmet-grid" clothes={this.state.clothes}/>
             </div>
         )
     }
 }
 
-export default Helmets;
+export default Clothes;
