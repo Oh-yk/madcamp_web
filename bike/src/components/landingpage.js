@@ -32,7 +32,7 @@ class LandingPage extends Component {
                              textAlign : "left",
                              fontFamily : 'Fira Sans',
                              padding : "25px 25px",
-                             width: "100%",
+                             width: "98%",
                              height: "60%",
                              backgroundImage: `url(${"https://images.unsplash.com/photo-1592229338506-d4631f32b2b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"})`,
                              backgroundSize: 'cover',
@@ -53,36 +53,44 @@ class LandingPage extends Component {
                              textAlign : "left",
                              fontFamily : 'Fira Sans',
                              padding : "25px 25px",
-                             width: "100%",
+                             width: "98%",
                              height: "60%",
                              backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjg3/MDAxNTk2NjU1NzM5NzUz.qRj3otzlLMIt9DPjbRfjvwy_ZmXEao1CSH8cMaTvAS0g.4IqRaNfM3mL-PMMwhMKZCiWB2Mc0IIagQNIxbdfePdYg.PNG.kgy556/equipment.png?type=w773"})`,
                              backgroundSize: 'cover',
                              overflow: 'hidden',
                              color : 'black'
                              }}
-                         onClick={() => mapClick()}>
+                         onClick={() => eqClick()}>
                             <h2>
                                 Equipment
                             </h2> 
                             <h4>
-                                소듕한 장비들~
+                                명필은 붓탓을 하지 않지만, 프로 라이더는 장비탓을 합니다
                             </h4>
                         </div>
-                        <h2 
-                            style = {
-                                { 
-                                 paddingTop : "35px",
-                                 width: "100%",
-                                 height: "60%",
-                                 backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjY1/MDAxNTk2NjU1NzM1NTM3.bvvCKnYWjZTbNRry0XBhLMD2M5nYJSAdqjPTzfu9Wbkg.zqlCT4v3IwPtoVYnwyEvcKfTz9JgQ6jTIZYKfNeL9oAg.PNG.kgy556/healing.png?type=w773"})`,
-                                 backgroundSize: 'cover',
-                                 overflow: 'hidden',
-                                 color : 'aliceblue'
-                                }}
-                            onClick={() => tipClick()}
-                        >
-                            How To Overcome Pain
-                        </h2> 
+                        
+                        <div
+                        style = {
+                            { 
+                             textAlign : "left",
+                             fontFamily : 'Fira Sans',
+                             padding : "25px 25px",
+                             width: "98%",
+                             height: "60%",
+                             backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjY1/MDAxNTk2NjU1NzM1NTM3.bvvCKnYWjZTbNRry0XBhLMD2M5nYJSAdqjPTzfu9Wbkg.zqlCT4v3IwPtoVYnwyEvcKfTz9JgQ6jTIZYKfNeL9oAg.PNG.kgy556/healing.png?type=w773"})`,
+                             backgroundSize: 'cover',
+                             overflow: 'hidden',
+                             color : 'aliceblue'
+                             }}
+                         onClick={() => tipClick()}>
+                            <h2>
+                                Tips
+                            </h2> 
+                            <h4>
+                                꾸준한 운동으로 부상을 예방하고 대처 방법을 배워보세요
+                            </h4>
+                        </div>
+                        
                         <div className="banner-text">
                             <h1>Everything You Need for a Bicycle Trip</h1>
                         

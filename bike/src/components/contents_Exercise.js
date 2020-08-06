@@ -27,6 +27,11 @@ const exercise = [
         index : 4,
         name : "[여행 전] 지구력 강화",
         picture : "https://www.youtube.com/embed/s14NQ6Cz4QE"
+    },
+    {
+        index : 5,
+        name : "[여행 전] 라이딩 준비물",
+        picture : "https://www.youtube.com/embed/yFvy3d_cwYQ?start=157"
     }
 ]
 
