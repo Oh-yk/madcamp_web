@@ -59,3 +59,53 @@
 .equipment-grid {
   display: flex;
 }
+
+/* For drag and drop of profile image */
+.title {
+  font-size: 2rem;
+  text-align: center !important;
+  margin-top: 10%;
+  color: #4aa1f3;
+  font-weight: bold;
+}
+
+.content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.drop-message {
+  text-align: center;
+  color: #4aa1f3;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+.field-name {
+  text-align: left;
+  align-items: flex-start;
+  color: #4aa1f3;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.my-page-section {
+  display: flex;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.row {
+  display: inline-block;
+}

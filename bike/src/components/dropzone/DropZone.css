@@ -1,0 +1,19 @@
+.container {
+    transform: translateY(0%);
+}
+
+.container p {
+    color: red;
+    text-align: center;
+}
+
+.drop-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border: 4px dashed #4aa1f3;
+}
