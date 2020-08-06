@@ -26,37 +26,48 @@ class LandingPage extends Component {
             <div style={{width: '100%', margin: 'auto'}}>
                 <Grid className="landing-grid">
                     <Cell col={12}>
-                        <h2
-                            style = {
-                               { 
-                                fontFamily : 'Segoe UI',
-                                paddingTop : "25px",
-                                width: "100%",
-                                height: "60%",
-                                backgroundImage: `url(${"https://images.unsplash.com/photo-1592229338506-d4631f32b2b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"})`,
-                                backgroundSize: 'cover',
-                                overflow: 'hidden',
-                                color : 'aliceblue'
-                                }}
-                            onClick={() => mapClick()}
-                        >
-                            Find Best Course For Your Trip
-                        </h2> 
-                        <h2 
-                            style = {
-                                { 
-                                 paddingTop : "35px",
-                                 width: "100%",
-                                 height: "60%",
-                                 backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjg3/MDAxNTk2NjU1NzM5NzUz.qRj3otzlLMIt9DPjbRfjvwy_ZmXEao1CSH8cMaTvAS0g.4IqRaNfM3mL-PMMwhMKZCiWB2Mc0IIagQNIxbdfePdYg.PNG.kgy556/equipment.png?type=w773"})`,
-                                 backgroundSize: 'cover',
-                                 overflow: 'hidden',
-                                 color : 'inherit'
-                                }}
-                            onClick={() => eqClick()}
-                        >
-                            Recommend Good Stuff
-                        </h2> 
+                        <div
+                        style = {
+                            { 
+                             textAlign : "left",
+                             fontFamily : 'Fira Sans',
+                             padding : "25px 25px",
+                             width: "100%",
+                             height: "60%",
+                             backgroundImage: `url(${"https://images.unsplash.com/photo-1592229338506-d4631f32b2b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"})`,
+                             backgroundSize: 'cover',
+                             overflow: 'hidden',
+                             color : 'aliceblue'
+                             }}
+                         onClick={() => mapClick()}>
+                            <h2>
+                                Map
+                            </h2> 
+                            <h4>
+                                생생한 코멘트와 함께 여행을 준비할 수 있습니다
+                            </h4>
+                        </div>
+                        <div
+                        style = {
+                            { 
+                             textAlign : "left",
+                             fontFamily : 'Fira Sans',
+                             padding : "25px 25px",
+                             width: "100%",
+                             height: "60%",
+                             backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjg3/MDAxNTk2NjU1NzM5NzUz.qRj3otzlLMIt9DPjbRfjvwy_ZmXEao1CSH8cMaTvAS0g.4IqRaNfM3mL-PMMwhMKZCiWB2Mc0IIagQNIxbdfePdYg.PNG.kgy556/equipment.png?type=w773"})`,
+                             backgroundSize: 'cover',
+                             overflow: 'hidden',
+                             color : 'black'
+                             }}
+                         onClick={() => mapClick()}>
+                            <h2>
+                                Equipment
+                            </h2> 
+                            <h4>
+                                소듕한 장비들~
+                            </h4>
+                        </div>
                         <h2 
                             style = {
                                 { 
