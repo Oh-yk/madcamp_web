@@ -1,6 +1,6 @@
 import React from 'react';
 import './uiEquip.css';
-import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton, Textfield } from 'react-mdl';
+import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
 
 const HelmetCard = (props) => {
     return (
