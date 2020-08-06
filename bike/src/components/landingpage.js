@@ -24,7 +24,7 @@ class LandingPage extends Component {
         }
 
         return (
-            <div style={{width: '100%', margin: 'auto'}}>
+            <div style={{width: '100%', height: '100%', margin: 'auto'}}>
                 <Grid className="landing-grid">
                     <Cell col={12}>
                         <div
@@ -34,7 +34,7 @@ class LandingPage extends Component {
                              fontFamily : 'Fira Sans',
                              padding : "25px 25px",
                              width: "98%",
-                             height: "60%",
+                             height: "400px",
                              backgroundImage: `url(${"https://images.unsplash.com/photo-1592229338506-d4631f32b2b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"})`,
                              backgroundSize: 'cover',
                              overflow: 'hidden',
@@ -55,7 +55,7 @@ class LandingPage extends Component {
                              fontFamily : 'Fira Sans',
                              padding : "25px 25px",
                              width: "98%",
-                             height: "60%",
+                             height: "400px",
                              backgroundImage: `url(${"https://cdn.crowdpic.net/list-thumb/thumb_l_232C27CF53C5ED657D8666AE75452327.jpg"})`,
                              backgroundSize: 'cover',
                              overflow: 'hidden',
@@ -77,7 +77,7 @@ class LandingPage extends Component {
                              fontFamily : 'Fira Sans',
                              padding : "25px 25px",
                              width: "98%",
-                             height: "60%",
+                             height: "400px",
                              backgroundImage: `url(${"https://cdn.crowdpic.net/list-thumb/thumb_l_D1ABD523471C243CC2568A083A0682DA.jpg"})`,
                              backgroundSize: 'cover',
                              overflow: 'hidden',
@@ -90,38 +90,6 @@ class LandingPage extends Component {
                             <h4>
                                 꾸준한 운동으로 부상을 예방하고 대처 방법을 배워보세요
                             </h4>
-                        </div>
-                        
-                        <div className="banner-text">
-                            <h1>Everything You Need for a Bicycle Trip</h1>
-                        
-                        <hr/> {/* // dotted line */}
-    
-                    <p>Bicycle path through the country | Bicycle equipment | Place to stay | First aid</p>
-    
-                <div className="page-links">
-                    {/* Map */}
-                    <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                        <i className="fa fa-map-marked-alt" aria-hidden="true" />
-                    </a>
-    
-                    {/* Github */}
-                    <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                        <i className="fa fa-github-square" aria-hidden="true" />
-                    </a>
-    
-                    {/* FreeCodeCamp */}
-                    <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                        <i className="fa fa-free-code-camp-square" aria-hidden="true" />
-                    </a>
-    
-                    {/* Youtube */}
-                    <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                        <i className="fa fa-youtube-square" aria-hidden="true" />
-                    </a>
-    
-                </div>
-    
                         </div>
                     </Cell>
                 </Grid>
