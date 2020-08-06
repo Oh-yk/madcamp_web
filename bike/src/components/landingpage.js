@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import { Redirect } from 'react-router-dom';
 import '../index.css';
+import Equipment from './equipment';
 
 class LandingPage extends Component {
 
@@ -55,7 +56,7 @@ class LandingPage extends Component {
                              padding : "25px 25px",
                              width: "98%",
                              height: "60%",
-                             backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjg3/MDAxNTk2NjU1NzM5NzUz.qRj3otzlLMIt9DPjbRfjvwy_ZmXEao1CSH8cMaTvAS0g.4IqRaNfM3mL-PMMwhMKZCiWB2Mc0IIagQNIxbdfePdYg.PNG.kgy556/equipment.png?type=w773"})`,
+                             backgroundImage: `url(${"https://cdn.crowdpic.net/list-thumb/thumb_l_232C27CF53C5ED657D8666AE75452327.jpg"})`,
                              backgroundSize: 'cover',
                              overflow: 'hidden',
                              color : 'black'
@@ -77,7 +78,7 @@ class LandingPage extends Component {
                              padding : "25px 25px",
                              width: "98%",
                              height: "60%",
-                             backgroundImage: `url(${"https://postfiles.pstatic.net/MjAyMDA4MDZfMjY1/MDAxNTk2NjU1NzM1NTM3.bvvCKnYWjZTbNRry0XBhLMD2M5nYJSAdqjPTzfu9Wbkg.zqlCT4v3IwPtoVYnwyEvcKfTz9JgQ6jTIZYKfNeL9oAg.PNG.kgy556/healing.png?type=w773"})`,
+                             backgroundImage: `url(${"https://cdn.crowdpic.net/list-thumb/thumb_l_D1ABD523471C243CC2568A083A0682DA.jpg"})`,
                              backgroundSize: 'cover',
                              overflow: 'hidden',
                              color : 'aliceblue'
