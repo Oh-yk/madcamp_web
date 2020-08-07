@@ -34,7 +34,7 @@ class ReviewForm extends Component {
     return (
       <form>
           <Row>
-              <Col>
+              <Col className="row">
                   <DropZone></DropZone>
               </Col>
               <Col>
@@ -78,7 +78,6 @@ class ReviewForm extends Component {
                       })}
                   </div>
                   <div className="text-left">
-                      <hr className="my-4" />
                       <input onClick={this.handleChange}/>
                   </div>
               </Col>

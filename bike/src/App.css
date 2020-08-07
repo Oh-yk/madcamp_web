@@ -93,7 +93,17 @@
   align-items: flex-start;
   color: #4aa1f3;
   font-family: Arial;
+  font-size: 15px;
+  margin-right: 70px;
+}
+
+.field-result {
+  text-align: left;
+  align-items: flex-start;
+  color: #000000;
+  font-family: Arial;
   font-size: 20px;
+  margin-right: 70px;
 }
 
 .my-page-section {
@@ -112,6 +122,7 @@ input[type="radio"] {
 .row {
   display: inline-block;
   margin: 5px;
+
   justify-content: center;
 }
 

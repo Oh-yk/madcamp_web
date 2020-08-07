@@ -12,7 +12,9 @@ class Review extends Component {
       view_score: 0,
       safety_score: 0,
       comment: '',
-      id: 0
+      id: 0,
+      date: '',
+      dist: 0,
     },
   }
 
@@ -23,6 +25,8 @@ class Review extends Component {
       view_score: '',
       safety_score: '',
       comment: '',
+      date: '',
+      dist: '',
   }
 
   handleRemove = () => {
@@ -65,15 +69,69 @@ class Review extends Component {
   render() {
     const { editing } = this.state;
 
+    const {
+        name, level_score, view_score, safety_score, comment, dist, date
+      } = this.props.info;
+      
+      const style = {
+          paddingTop: "20px",
+          paddingLeft: "30px",
+      };
+
     if (editing) {
         return (
             <div>
-                <div><b>{this.state.name}</b></div>
-                <Row>
-                    <Col>
-                        <DropZone></DropZone>
+                <Card className="card-profile shadow" style={{width:"700px", height:"250px", margin:"20px"}}>
+                <Row className="justify-content-center">
+                    <Col xs="auto">
+                        <div style={style}>
+                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                                alt="..."
+                                className="rounded-circle"
+                                src="/profile_pic.png"
+                                width="70" height="70" alt="cam"
+                            />
+                            </a>
+                        </div>
                     </Col>
-                    <Col>
+                    <Col xs="auto">
+                        <div style={{fontSize:"30px", textAlign:"left", paddingTop:"20px"}}>{name}</div>
+                        <div style={{fontSize:"15px", textAlign:"left"}}>총 {dist} km</div>
+                    </Col>
+                    <Col xs="auto">
+                    <div style={{fontSize:"15px", textAlign:"left", paddingTop:"25px"}}>{date}</div>
+                    </Col>
+                    <Col xs="auto">
+                        <div>
+                        <Button
+                            className="mr-4"
+                            color="warning"
+                            href="#pablo"
+                            onClick={this.handleToggleEdit}
+                            size="sm"
+                            style={{marginTop:"20px", marginLeft:"220px"}}
+                        >
+                            <img src="/edit.png" alt="my image" width="20" height="20"></img>
+                        </Button>
+                        <Button
+                            className="mr-4"
+                            color="danger"
+                            href="#pablo"
+                            onClick={this.handleRemove}
+                            size="sm"
+                            style={{marginTop:"20px", marginRight:"30px"}}
+                        >
+                            <img src="/trash.png" alt="my image" width="20" height="20"></img>
+                        </Button>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs="auto">
+                            <img src="./placeholder.png" width="150px" height="100px" style={{paddingLeft:"15px"}}></img>
+                    </Col>
+                    <Col xs="auto">
                         <div>
                                 난이도
                                 {[...Array(5)].map((star, i) => {
@@ -113,37 +171,31 @@ class Review extends Component {
                                 );
                             })}
                         </div>
-                        <Button onClick={this.handleToggleEdit}>적용</Button>
-                        <Button onClick={this.handleRemove}>삭제</Button>
                     </Col>
                     <Col>
                     <div>
                         <input
                             value={this.state.comment}
+                            type="textarea"
                             name="comment"
                             placeholder="이 경로에 대한 후기 작성"
                             onChange={this.handleChange}
+                            style={{width:"160px", height:"80px"}}
                         />
                     </div>
+                    <Button onClick={this.handleToggleEdit} style={{marginBottom:"10px", marginLeft:"230px"}}>적용</Button>
                     </Col>  
                 </Row>
-            </div>  
+                </Card>  
+            </div>
         );
     }
 
-    const {
-      name, level_score, view_score, safety_score, comment
-    } = this.props.info;
-    
-    const style = {
-        padding: "15px"
-    };
-
     return (
         <div>
-            <Card className="card-profile shadow" style={{width:"700px", margin:"20px"}}>
+            <Card className="card-profile shadow" style={{width:"700px", height:"250px", margin:"20px"}}>
                 <Row className="justify-content-center">
-                    <Col>
+                    <Col xs="auto">
                         <div style={style}>
                             <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
@@ -155,42 +207,44 @@ class Review extends Component {
                             </a>
                         </div>
                     </Col>
-                    <Col style={{padding:"15px"}}>
-                        <div style={{fontSize:"30px", textAlign:"left"}}>{name}</div>
-                        <div style={{fontSize:"15px", textAlign:"left"}}>총 200 km</div>
+                    <Col xs="auto">
+                        <div style={{fontSize:"30px", textAlign:"left", paddingTop:"20px"}}>{name}</div>
+                        <div style={{fontSize:"15px", textAlign:"left"}}>총 {dist} km</div>
+                    </Col>
+                    <Col xs="auto">
+                    <div style={{fontSize:"15px", textAlign:"left", paddingTop:"25px"}}>{date}</div>
                     </Col>
                     <Col>
-                    <div style={{fontSize:"20px", textAlign:"left"}}>2020.09.21</div>
-                    </Col>
-                    <Col>
-                        <div className="d-flex justify-content-between" style={style}>
+                        <div>
                         <Button
                             className="mr-4"
                             color="warning"
                             href="#pablo"
                             onClick={this.handleToggleEdit}
                             size="sm"
+                            style={{marginTop:"20px", marginLeft:"220px"}}
                         >
                             <img src="/edit.png" alt="my image" width="20" height="20"></img>
                         </Button>
                         <Button
-                            className="float-right"
+                            className="mr-4"
                             color="danger"
                             href="#pablo"
                             onClick={this.handleRemove}
                             size="sm"
+                            style={{marginTop:"20px", marginRight:"30px"}}
                         >
                             <img src="/trash.png" alt="my image" width="20" height="20"></img>
                         </Button>
                         </div>
                     </Col>
                 </Row>
-                <CardBody className="pt-0 pt-md-4" style={{padding:"20px"}}>
+                <CardBody className="pt-0 pt-md-4">
                     <Row>
-                        <Col>
-                            <DropZone></DropZone>
+                        <Col xs="auto">
+                            <img src="./placeholder.png" width="150px" height="100px"></img>
                         </Col>
-                        <Col>
+                        <Col xs="auto">
                             <div>
                                     난이도
                                     {[...Array(5)].map((star, i) => {
@@ -230,8 +284,9 @@ class Review extends Component {
                                     );
                                 })}
                             </div>
-                            <div className="text-left">
-                                <hr className="my-4" />
+                        </Col>
+                        <Col>
+                            <div>
                                 <p>
                                     {comment}
                                 </p>

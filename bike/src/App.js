@@ -28,7 +28,7 @@ class App extends Component {
             <Layout>
                 <Header className="header-color"
                 style = {{paddingTop : "20px" , justifyItems : "center"}}
-                title="Happy Bicycle Trip" scroll>
+                title="자전거와 나" scroll>
                     <Navigation>
                         <Link to="/" 
                         style = {{fontSize : "20px"}}>Home</Link>

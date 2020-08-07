@@ -7,11 +7,20 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Nanum Square Round',
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <MuiThemeProvider theme={theme}>
       <App />
+    </MuiThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

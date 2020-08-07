@@ -8,6 +8,7 @@ import ReviewForm from './review/reviewForm';
 import ReviewList from './review/reviewList';
 import * as d3 from "d3"
 import { Container } from '../Container';
+import { style } from 'd3';
 const margin = { top: 0, right: 0, bottom: 15, left: 50 }
 const width = 700 - margin.left - margin.right
 const height = 155 - margin.top - margin.bottom
@@ -30,9 +31,11 @@ class Map extends Component {
                 id: 0,
                 name: '이주훈',
                 level_score: 1,
-                view_score: 3,
+                view_score: 4,
                 safety_score: 3,
-                comment: "굿"
+                comment: "생애 첨으로 하는 자전거 여행인데...이 구간은 역시 쉬운듯! 한강따라 가면 경치가 아주 좋음. 중간에 내려서 라면먹을까 고민했지만 나중에 맛있는게 더 많이 나온다 들었으니 우선은 직진!",
+                date: "2020.08.07",
+                dist: 125.6,
             },
             {
                 id: 1,
@@ -40,28 +43,36 @@ class Map extends Component {
                 level_score: 1,
                 view_score: 4,
                 safety_score: 5,
-                comment: "메일 달리던 곳이라 좋아요^0^ 여행 시작해서 떨리네요"
+                comment: "매일 달리던 곳이라 좋아요^0^ 여행 시작해서 떨리네요",
+                date: "2020.06.12",
+                dist: 2501.7,
             },{
                 id: 2,
                 name: '김경연',
                 level_score: 4,
                 view_score: 4,
                 safety_score: 5,
-                comment: "국토종주 하기에는 체력이 딸리네요. 포기하고 강남으로 아아나 마시러갑니다"
+                comment: "국토종주 하기에는 체력이 딸리네요. 포기하고 강남으로 아아나 마시러갑니다",
+                date: "2020.04.21",
+                dist: 50.2,
             },{
                 id: 3,
                 name: '김민규',
                 level_score: 1,
                 view_score: 4,
                 safety_score: 5,
-                comment: ""
+                comment: "",
+                date: "2020.03.02",
+                dist: 789.0,
             },{
                 id: 4,
                 name: '이상현',
                 level_score: 1,
                 view_score: 3,
                 safety_score: 3,
-                comment: "인증센터가 더 나은 곳에 있어야할 것 같다"
+                comment: "인증센터가 더 나은 곳에 있어야할 것 같다",
+                date: "2020.02.16",
+                dist: 552.6,
             },
             //문경새재
             {
@@ -70,21 +81,27 @@ class Map extends Component {
                 level_score: 5,
                 view_score: 5,
                 safety_score: 2,
-                comment: "힘들어서 매운탕 먹고 죽어라 오른 것 밖에 기억 안남."
+                comment: "8월 5일 산사태로 내리막 엉망입니다",
+                date: "2020.08.07",
+                dist: 975.2,
             },{
                 id: 6,
                 name: '이수훈',
                 level_score: 5,
                 view_score: 3,
                 safety_score: 3,
-                comment: "죽을거같다"
+                comment: "힘들어서 매운탕 먹고 죽어라 오른 것 밖에 기억 안남.",
+                date: "2020.07.27",
+                dist: 608.5,
             },{
                 id: 7,
                 name: '오현민',
                 level_score: 5,
                 view_score: 1,
                 safety_score: 1,
-                comment: "8월 7일 산사태로 내리막 엉망입니다"
+                comment: "거의 죽을 것 같지만 여기서 포기하면 많이 아쉬운듯.",
+                date: "2020.04.11",
+                dist: 480.6,
             },
             //도착
             {
@@ -93,7 +110,9 @@ class Map extends Component {
                 level_score: 2,
                 view_score: 2,
                 safety_score: 5,
-                comment: "다 와간다!!! 남부 내려오니 더워요"
+                comment: "다 와간다!!! 남부 내려오니 더워요",
+                date: "2020.06.14",
+                dist: 2501.7,
             },
             {
                 id: 9,
@@ -101,7 +120,9 @@ class Map extends Component {
                 level_score: 1,
                 view_score: 4,
                 safety_score: 4,
-                comment: "역에서 기차타고 집감. 너무 편하다"
+                comment: "역에서 기차타고 집감. 너무 편하다",
+                date: "2020.03.29",
+                dist: 1025.7,
             },
             {
                 id: 10,
@@ -109,7 +130,9 @@ class Map extends Component {
                 level_score: 3,
                 view_score: 3,
                 safety_score: 4,
-                comment: "휴게소에서 꿀떡파는데 맛있음"
+                comment: "휴게소에서 꿀떡파는데 맛있음",
+                date: "2019.12.07",
+                dist: 1500.6,
             },               
           ],
           keyword: ''
@@ -483,7 +506,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 1})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(37.50923949, 126.9949918, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -519,7 +542,7 @@ class Map extends Component {
               if (isClicked) {
                   this.setState({route: 2})
                   this.handleShow();
-                  this.panTo(37.123451, 128.235254, 7);
+                  this.panTo(37.56866084, 127.2112096, 7);
               } else {
                   this.handleShowAll();
                   this.panOut();
@@ -555,7 +578,7 @@ class Map extends Component {
               if (isClicked) {
                   this.setState({route: 3})
                   this.handleShow();
-                  this.panTo(37.123451, 128.235254, 7);
+                  this.panTo(37.51694501, 127.4032412, 7);
               } else {
                   this.handleShowAll();
                   this.panOut();
@@ -591,7 +614,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 4})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(37.41026069, 127.5400654, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -627,7 +650,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 5})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(37.33353989, 127.6134968, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -663,7 +686,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 6})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(37.10287403, 127.7677287, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -699,7 +722,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 7})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(37.01775317, 127.9193857, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -735,7 +758,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 8})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.88624164, 127.9523872, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -771,7 +794,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 9})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.76749996, 128.0030458, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -807,7 +830,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 10})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.72737855, 128.1088542, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -843,7 +866,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 11})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.59001203, 128.2133346, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -879,7 +902,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 12})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.43976598, 128.2549004, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -915,7 +938,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 13})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.33782078, 128.2888371, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -951,7 +974,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 14})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(36.12273594, 128.3853437, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -987,7 +1010,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 15})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.87034201, 128.3933808, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1023,7 +1046,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 16})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.75878122, 128.3898405, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1059,7 +1082,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 17})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.62972981, 128.4010743, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1095,7 +1118,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 18})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.52845132, 128.3569942, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1131,7 +1154,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 19})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.41487583, 128.4299974, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1167,7 +1190,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 20})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.38135011, 128.5237573, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1203,7 +1226,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 21})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.35197872, 128.7247987, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1239,7 +1262,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 22})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.36908745, 128.9045061, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1275,7 +1298,7 @@ class Map extends Component {
             if (isClicked) {
                 this.setState({route: 23})
                 this.handleShow();
-                this.panTo(37.123451, 128.235254, 7);
+                this.panTo(35.1615485, 128.9851883, 7);
             } else {
                 this.handleShowAll();
                 this.panOut();
@@ -1408,7 +1431,7 @@ class Map extends Component {
             this.setState({review_begin: 5, review_end: 8})
           }
           else if (this.state.route == 20) {
-            this.setState({review_begin: 8, review_end: 10})
+            this.setState({review_begin: 8, review_end: 11})
           }
       }
       handleShowAll() {
@@ -1421,15 +1444,14 @@ class Map extends Component {
         const reviews = this.state.information.slice(this.state.review_begin, this.state.review_end)
 
         return(
-            <div>
+            <div style={{paddingTop: "20px", paddingRight:"60px", justifyContent:'center', alignItems:'center'}}>
                 <Row>
                     <Col>
-                        <Card>
-                            <CardHeader>내 경로</CardHeader>
-                            <CardBody>
-                                <UncontrolledDropdown>
+                        <Card style={{margin: "20px"}}>
+                            <CardBody style={{padding: "20px"}}>
+                                <UncontrolledDropdown style={{paddingBottom: "20px"}}>
                                     <DropdownToggle caret>
-                                        자전거길
+                                        자전거길 선택
                                     </DropdownToggle>
                                     <DropdownMenu>
                                         <DropdownItem onClick={() => this.loadMap()}>서울-부산 자전거길</DropdownItem>
@@ -1457,10 +1479,6 @@ class Map extends Component {
                                         <span class="category_bg pharmacy"></span>
                                         약국
                                     </li>  
-                                    <li id="OL7" data-order="3"> 
-                                        <span class="category_bg oil"></span>
-                                        주유소
-                                    </li>  
                                     <li id="CE7" data-order="4"> 
                                         <span class="category_bg cafe"></span>
                                         카페
@@ -1470,39 +1488,37 @@ class Map extends Component {
                                         편의점
                                     </li>      
                                 </ul>
-                                <input type="checkbox" id="chkUseDistrict" onClick={() => this.setOverlayMapTypeId()}/> 지적편집도 정보 보기 
-                                <input type="checkbox" id="chkTerrain" onClick={() => this.setOverlayMapTypeId()}/> 지형정보 보기 
-                                <input type="checkbox" id="chkTraffic" onClick={() => this.setOverlayMapTypeId()}/> 교통정보 보기 
-                                <input type="checkbox" id="chkBicycle" onClick={() => this.setOverlayMapTypeId()}/> 자전거도로 정보 보기 
+                                <input type="checkbox" id="chkUseDistrict" onClick={() => this.setOverlayMapTypeId()} /> 지적편집도 정보 보기 
+                                <input type="checkbox" id="chkTerrain" onClick={() => this.setOverlayMapTypeId()} /> 지형정보 보기 
+                                <input type="checkbox" id="chkTraffic" onClick={() => this.setOverlayMapTypeId()} /> 교통정보 보기 
+                                <input type="checkbox" id="chkBicycle" onClick={() => this.setOverlayMapTypeId()} /> 자전거도로 정보 보기 
                             </CardBody>
                         </Card>
                     </Col>
                     <Col className='mt-5' style={{visibility: this.state.showButton ? 'visible' : 'hidden' }}>
-                        <h2>서울-부산 자전거길</h2>
-                        <div>무려 600 km를 육박하는 이 자전거길은 한국 자전거 여행자의 최종 관문이라 할 수 있습니다. 여의도 마리나부터 부산시청까지 5~7일을 거쳐 죽음의 고비로 불리는 문경새재를 통과해야 합니다.
-                             체력을 유지하면서 포기하지 않고 꾸준히 매일 나아가는게 중요한 길입니다.</div>
+                        <h1><b>서울-부산 자전거길</b></h1>
+                        <div><i>무려 600 km를 육박하는 이 자전거길은 한국 자전거 여행자의 최종 관문이라 할 수 있습니다. 여의도 마리나부터 부산시청까지 5~7일을 거쳐 죽음의 고비로 불리는 문경새재를 통과해야 합니다.
+                             체력을 유지하면서 포기하지 않고 꾸준히 매일 나아가야합니다.</i></div>
                         <hr/>
                         <div><h3>고도 정보</h3></div>
                         <div className="row">
                             <div>
-                                <h5>총 거리</h5>
-                                <h7>571.7 km</h7>
-                                <h5>최저/최고 고도</h5>
-                                <h7>1 m / 539 m</h7>
-                                <h5>예상 시간</h5>
-                                <h7>31시간 57분</h7>
-                                <h5>칼로리 소비량</h5>
-                                <h7>11,502 kcal</h7>
+                                <div style={{fontSize:"12px"}}>총 거리</div>
+                                <div style={{fontSize:"20px", color:"green"}}>571.7 km</div>
+                                <div style={{fontSize:"12px"}}>최저/최고 고도</div>
+                                <div style={{fontSize:"20px", color:"green"}}>1 m / 539 m</div>
+                                <div style={{fontSize:"12px"}}>예상 시간</div>
+                                <div style={{fontSize:"20px", color:"green"}}>31시간 57분</div>
+                                <div style={{fontSize:"12px"}}>칼로리 소비량</div>
+                                <div style={{fontSize:"20px", color:"green"}}>11,502 kcal</div>
                             </div>
-                            <div style={{display: "flex"}}>
+                            <div style={{display: "flex", paddingTop: "35px"}}>
                             {this.state.data.length > 0 && <div id="elevationChart" />}
                             </div>
                         </div>
                         <hr/>
-                        <div className="row">
-                            <h3>리뷰</h3>
-                            <Container triggerText="리뷰 작성" onSubmit={this.onSubmit} />
-                        </div>
+                        <h3>리뷰</h3>
+                        <Container triggerText="리뷰 작성" onSubmit={this.onSubmit} />
                         <ReviewList
                             data={reviews}
                             onRemove={this.handleRemove}

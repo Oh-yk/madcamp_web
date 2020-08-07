@@ -88,3 +88,5 @@ code {
   overflow: hidden;
   margin-right: 17px;
 }
+
+@font-face { font-family: "Nanum Square Round"; src:url(./fonts/NanumSquareRoundB.ttf) format('truetype');}

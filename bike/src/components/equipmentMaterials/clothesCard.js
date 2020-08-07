@@ -12,13 +12,13 @@ const ClothesCard = (props) => {
                 <p>{props.published}</p>
             </div> */}
             <Card shadow={0} style={{width: "600", height: "1800", margin: "30px"}}>
-                <img src={props.image} alt="" />
-                <CardTitle style={{color: '#000', height: '176px'}} >{props.title}</CardTitle>
-                <CardText>
-                    {props.author}
+                <img src={props.image} alt="" style={{paddingTop:"20px"}}/>
+                <CardTitle style={{color: '#000', height: '120px'}} >{props.title}</CardTitle>
+                <CardText style={{fontSize:"18px"}}>
+                    <b>{props.author}원</b>
                 </CardText>
                 <CardText>
-                    {props.published}
+                    브랜드: {props.published}
                 </CardText>
                 <CardActions border>
                     <Button colored>Buy</Button>
